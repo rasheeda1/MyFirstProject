@@ -1,5 +1,6 @@
+
 #line{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 30%;
     border-top: 1px solid gray;
@@ -20,15 +21,26 @@
       opacity: 1;
     }
 }
+
 .animation{
     color: gray;
+    text-shadow: 2px 2px 3px black;
     animation: slide-in-right 2s ease-in-out;
     animation-fill-mode: both;
     opacity: 0;
     transform: translateX(100%);
-    margin-top: 30%;
+    position: fixed;
+    width: 100%;
+    top: 10%;
     font-size: 3rem;
     text-align: center;
+}
+@media only screen and (max-width: 835px){
+    .animation{
+        font-size: 2rem;
+        margin-top: 20%;
+    }
+    
 }
 @keyframes slide-in-right {
     0% {
@@ -40,38 +52,59 @@
       opacity: 1;
     }
 }
-nav a{
-    color: gray;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    font-size: 1.5rem;
-    
-}
-
-.container{
-    position: relative;
-    background-image: url("https://68.media.tumblr.com/5a8d3398d22723a49b6624678082c527/tumblr_nm3sjbXTRF1t0syqyo1_500.jpg");
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 30px;
-}
-
-nav{
+#nav-bar{
     display: flex;
     flex-direction: row;
-    text-align: right;
-    justify-content: space-evenly;
-}
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-header{
-    color: purple;
     text-align: center;
+    justify-content: space-evenly;
+   
+}
+nav a{
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    color: gray;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px black;
+    
+}
+.container{
+    position: relative;
+    height: 100vh;
+}
+@media only screen and (max-width: 835px){
+    #animated-image{
+        width: 250px;
+        height: 250px;
+    }
+}
+#animated-image {
+    animation: rotation 9s infinite linear;
+    position: absolute;
+    bottom: 0;
+    border-radius: 1.5rem;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:black ;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 3px gray;
+}
+@media only screen and (max-width: 835px){
+    p{
+        font-size: 1.8rem;
+    }
 }

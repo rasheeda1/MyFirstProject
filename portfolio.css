@@ -1,0 +1,104 @@
+.container{
+    position: relative;
+    height: 100vh;
+}
+#rotate{
+    animation: rotation 9s infinite linear;
+    position: absolute;
+    bottom: 80%;
+    border-radius: 1.5rem;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width: 835px){
+    #rotate{
+        width: 140px;
+        height: 180px;
+    }
+}
+#line{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    border-top: 1px solid gray;
+    width: 100%;
+    transform: translateY(-50%);
+    animation: slide-in-right 2s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateX(100%);
+}
+@keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+#nav-bar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 3px black;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+#mainHeading{
+    font-size: 5rem;
+    color: gray;
+    text-shadow: 2px 2px 5px black;
+}
+@media only screen and (max-width: 835px) {
+    #mainHeading{
+        font-size: 2.8rem;
+    }
+    
+}
+#mainName{
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px gray;
+}
+@media only screen and (max-width: 835px) {
+    #mainName{
+        font-size: 1.5rem;
+    }
+    
+}
+h3{
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px gray;
+}
+@media only screen and (max-width: 835px) {
+    h3{
+        font-size: 1rem;
+    }
+    
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 3px gray;
+}

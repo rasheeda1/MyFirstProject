@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    border: 4px solid black;
+  }
+#line{
+    position: absolute;
+    left: 0;
+    top: 15%;
+    border-top: 1px solid gray;
+    width: 100%;
+    transform: translateY(-50%);
+    animation: slide-in-right 2s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateX(100%);
+}
+@keyframes slide-in-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: rgb(75, 69, 69);
+    font-size: 20px;
+    text-shadow: 2px 2px 5px gray;
+}
+
+header{
+    color: rgb(58, 58, 58);
+    text-align: center;
+}
+p{
+    position: absolute;
+    top: 25%;
+    font-size: 1.3rem;
+}
+
+.heading{
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 5px gray;
+}
+@media only screen and (max-width: 835px){
+    header{
+        font-size: 1rem;
+    }
+}
+.heading1{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    text-shadow: 2px 2px 5px gray;
+}
+@media only screen and (min-width: 835px){
+    .heading1{
+        top: 40%;
+        left: 40%;
+        font-size: 2rem;
+        text-shadow: 2px 2px 5px gray;
+    }
+    
+}
+
+#paragraph{
+    position: absolute;
+    top: 80%;
+    text-align: center;
+    color: rgb(58, 58, 58);
+}
+@media only screen and (min-width: 835px){
+    #paragraph{
+        top: 55%;
+    }
+    
+}
+.heading2{
+    position:absolute;
+    top: 125%;
+    left: 15%;
+    text-shadow: 2px 2px 5px gray;
+}
+@media only screen and (min-width: 835px){
+    .heading2{
+        top: 75%;
+        left: 40%;
+        font-size: 2rem;
+        text-shadow: 2px 2px 5px gray;
+    }
+    
+}
+#paragraph1{
+    position: absolute;
+    top: 135%;
+    text-align: center;
+    color: rgb(58, 58, 58);
+}
+@media only screen and (min-width: 835px){
+    #paragraph1{
+        top: 90%;
+    }
+} 
+
+.heading{
+    animation: slide-in-left 2s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateX(100%);
+}
+@keyframes slide-in-left {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
