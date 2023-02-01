@@ -102,3 +102,9 @@ h3{
     font-size: 2rem;
     text-shadow: 2px 2px 3px gray;
 }
+@media only screen and (max-width: 835px) {
+    .para{
+        font-size: 1.5rem;
+    }
+    
+}
